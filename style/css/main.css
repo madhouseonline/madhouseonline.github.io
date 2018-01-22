@@ -23,11 +23,6 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -40,4 +35,22 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.test1 {
+    background-color: grey;
+}
+
+.test2 {
+    background-color: black;
+}
+
+img.icon {
+    width: 25px;
+    height: 25px;
+}
+
+#map {
+    width: 300px;
+    height: 300px;
 }
