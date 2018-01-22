@@ -1,8 +1,13 @@
-- link: /
-  name: Home
-- link: /about/
-  name: About
-- link: /stores/
-  name: Stores
-- link: /contact/
-  name: Contact
+pages:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Stores
+    subitems:
+      - page: Cairns
+        url: /cairns
+      - page: Townsville
+        url: /townsville
+  - title: Contact
+    url: /contact
