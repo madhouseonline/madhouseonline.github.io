@@ -37,17 +37,23 @@ ul.posts li {
     list-style: none;
 }
 
-.test1 {
-    background-color: grey;
+h1, h2, h3, h4, h5, h6 {
+    display: inline;
 }
 
-.test2 {
-    background-color: black;
+p {
+    text-align: justify;
 }
 
-img.icon {
-    width: 25px;
-    height: 25px;
+.table {
+    border-bottom: 0px !important;
+}
+.table th, .table td {
+    border: 0px !important;
+}
+
+span.icon {
+    font-size: 25px;
 }
 
 #map {
