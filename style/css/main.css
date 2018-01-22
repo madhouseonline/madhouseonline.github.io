@@ -58,5 +58,6 @@ span.icon {
 #map {
     width: 460px;
     height: 460px;
+    margin: auto;
 }
 
