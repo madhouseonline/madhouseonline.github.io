@@ -60,3 +60,8 @@ span.icon {
     height: 460px;
     margin: auto;
 }
+
+.map {
+    max-width: 100%;
+    max-height: 100%;
+}

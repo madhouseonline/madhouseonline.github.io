@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% capture monday-hour %}
+{{ page.monday }}
+{% endcapture %}
+{% capture tuesday-hour %}
+{{ page.tuesday }}
+{% endcapture %}
+{% capture wednesday-hour %}
+{{ page.wednesday }}
+{% endcapture %}
+{% capture thursday-hour %}
+{{ page.thursday }}
+{% endcapture %}
+{% capture friday-hour %}
+{{ page.friday }}
+{% endcapture %}
+{% capture saturday-hour %}
+{{ page.saturday }}
+{% endcapture %}
+{% capture sunday-hour %}
+{{ page.sunday }}
+{% endcapture %}
+{% capture store-name %}
+{{ page.store }}
+{% endcapture %}
+{% capture store-location %}
+{{ page.location }}
+{% endcapture %}
+<div class="row">
+	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
+		<h2>{{ page.title }}</h2>
+		{{ content }}
+		{% include store-hour.html monday=monday-hour tuesday=tuesday-hour wednesday=wednesday-hour thursday=thursday-hour friday=friday-hour saturday=saturday-hour sunday=sunday-hour
+		%}
+	</div>
+	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
+		{% include google-map.html store=store-name location=store-location %}
+	</div>
+</div>

@@ -29,11 +29,10 @@
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}&amp;callback=initMap"></script>
 -->
-<div id="map">
+<div>
   <iframe
-  width="460"
-  height="460"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9kKLLRKhVRn7mDlDC2BAl979TNWblKB0&q={{ include.store }},{{ include.location }}">
+  width="540"
+  height="540"
+  frameborder="0" style="border:0" class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9kKLLRKhVRn7mDlDC2BAl979TNWblKB0&q={{ include.store }},{{ include.location }}">
 </iframe>
 </div>

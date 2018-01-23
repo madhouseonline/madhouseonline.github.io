@@ -9,5 +9,7 @@ pages:
         url: /cairns
       - page: Townsville
         url: /townsville
+      - page: Rockhampton
+        url: /rockhampton
   - title: Contact
     url: /contact
