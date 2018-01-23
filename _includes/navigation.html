@@ -45,32 +45,34 @@
 -->
 
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-	<span class="navbar-brand mb-0 h1"><img src="/assets/images/MadHouseLogo.jpg" alt="madhouse logo"></span>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			{% for item in site.data.navigation.pages %}
-			{% if item.title == "Stores" %}
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					{{ item.title }}
-				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					{% for entry in item.subitems %}
-					<a class="dropdown-item" href="{{ entry.url }}">{{ entry.page }}</a>
-					{% endfor %}
-				</div>
-			</li>
-			{% else %}
-			<li class="nav-item">
-				<a class="nav-link" href="{{ item.url }}">
-					{{ item.title }}
-				</a>
-			</li>
-			{% endif %}
-			{% endfor %}
-		</ul>
+	<div class="container">
+		<span class="navbar-brand mb-0 h1"><img src="/assets/images/MadHouseLogo.jpg" alt="madhouse logo"></span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				{% for item in site.data.navigation.pages %}
+				{% if item.title == "Stores" %}
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						{{ item.title }}
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						{% for entry in item.subitems %}
+						<a class="dropdown-item" href="{{ entry.url }}">{{ entry.page }}</a>
+						{% endfor %}
+					</div>
+				</li>
+				{% else %}
+				<li class="nav-item">
+					<a class="nav-link" href="{{ item.url }}">
+						{{ item.title }}
+					</a>
+				</li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 </nav>
