@@ -1,15 +1,15 @@
 pages:
-  - title: Home
-    url: /
-  - title: About
-    url: /about
   - title: Stores
     subitems:
       - page: Cairns
-        url: /cairns
+        url: /cairns/
       - page: Townsville
-        url: /townsville
+        url: /townsville/
       - page: Rockhampton
-        url: /rockhampton
+        url: /rockhampton/
+  - title: About
+    url: /about/
   - title: Contact
-    url: /contact
+    url: /contact/
+  - title: Home
+    url: /
