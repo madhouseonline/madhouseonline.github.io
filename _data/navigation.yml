@@ -7,6 +7,8 @@ pages:
         url: /townsville/
       - page: Rockhampton
         url: /rockhampton/
+      - page: Redlynch
+        url: /redlynch/
   - title: About
     url: /about/
   - title: Contact

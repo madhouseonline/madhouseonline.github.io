@@ -28,13 +28,32 @@ layout: default
 {% capture store-location %}
 {{ page.location }}
 {% endcapture %}
+{% capture address %}
+{{ page.address }}
+{% endcapture %}
+{% capture phone-number %}
+{{ page.phone-number }}
+{% endcapture %}
+{% capture facebook-link %}
+{{ page.facebook-link }}
+{% endcapture %}
 <div class="row">
 	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
 		{{ content }}
-		{% include store-hour.html monday=monday-hour tuesday=tuesday-hour wednesday=wednesday-hour thursday=thursday-hour friday=friday-hour saturday=saturday-hour sunday=sunday-hour
-		%}
+		{% include store-hour.html 
+			monday=monday-hour 
+			tuesday=tuesday-hour 
+			wednesday=wednesday-hour 
+			thursday=thursday-hour 
+			friday=friday-hour 
+			saturday=saturday-hour 
+			sunday=sunday-hour 
+			address=address 
+			phone-number=phone-number 
+			facebook-link=facebook-link
+			%}
+		</div>
+		<div class="col-12 col-md-12 col-lg-6 col-xl-6">
+			{% include google-map.html store=store-name location=store-location %}
+		</div>
 	</div>
-	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
-		{% include google-map.html store=store-name location=store-location %}
-	</div>
-</div>
