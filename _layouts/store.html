@@ -37,6 +37,9 @@ layout: default
 {% capture facebook-link %}
 {{ page.facebook-link }}
 {% endcapture %}
+{% capture store-name %}
+{{ page.title }}
+{% endcapture %}
 <div class="row">
 	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
 		{{ content }}
@@ -51,6 +54,7 @@ layout: default
 			address=address 
 			phone-number=phone-number 
 			facebook-link=facebook-link
+			store-name=store-name
 			%}
 		</div>
 		<div class="col-12 col-md-12 col-lg-6 col-xl-6">
