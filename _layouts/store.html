@@ -1,32 +1,42 @@
 ---
 layout: default
 ---
-{% capture monday-hour %}
+<!-- Page Header -->
+{% capture store-name %}
+{{ page.header }}
+{% endcapture %}
+
+<!-- Store Hours -->
+{% capture monday %}
 {{ page.monday }}
 {% endcapture %}
-{% capture tuesday-hour %}
+{% capture tuesday %}
 {{ page.tuesday }}
 {% endcapture %}
-{% capture wednesday-hour %}
+{% capture wednesday %}
 {{ page.wednesday }}
 {% endcapture %}
-{% capture thursday-hour %}
+{% capture thursday %}
 {{ page.thursday }}
 {% endcapture %}
-{% capture friday-hour %}
+{% capture friday %}
 {{ page.friday }}
 {% endcapture %}
-{% capture saturday-hour %}
+{% capture saturday %}
 {{ page.saturday }}
 {% endcapture %}
-{% capture sunday-hour %}
+{% capture sunday %}
 {{ page.sunday }}
 {% endcapture %}
-{% capture store-name %}
+
+<!-- Google Maps Location Information -->
+{% capture store %}
 {{ page.store }}
 {% endcapture %}
-{% capture store-location %}
+{% capture location %}
 {{ page.location }}
+
+<!-- Store Information -->
 {% endcapture %}
 {% capture address %}
 {{ page.address }}
@@ -37,27 +47,24 @@ layout: default
 {% capture facebook-link %}
 {{ page.facebook-link }}
 {% endcapture %}
-{% capture store-name %}
-{{ page.title }}
-{% endcapture %}
+
 <div class="row">
 	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
 		{{ content }}
-		{% include store-hour.html 
-			monday=monday-hour 
-			tuesday=tuesday-hour 
-			wednesday=wednesday-hour 
-			thursday=thursday-hour 
-			friday=friday-hour 
-			saturday=saturday-hour 
-			sunday=sunday-hour 
+		{% include store-information.html 
+			monday=monday 
+			tuesday=tuesday 
+			wednesday=wednesday 
+			thursday=thursday 
+			friday=friday 
+			saturday=saturday 
+			sunday=sunday 
 			address=address 
 			phone-number=phone-number 
 			facebook-link=facebook-link
-			store-name=store-name
-			%}
-		</div>
-		<div class="col-12 col-md-12 col-lg-6 col-xl-6">
-			{% include google-map.html store=store-name location=store-location %}
-		</div>
+			store-name=store-name %}
 	</div>
+	<div class="col-12 col-md-12 col-lg-6 col-xl-6">
+		{% include google-map.html store=store location=location %}
+	</div>
+</div>
