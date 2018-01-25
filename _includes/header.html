@@ -15,8 +15,8 @@
 							{% if entry.url == page.url %}
 								active
 							{% endif %}
-						{% endfor %}">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						{% endfor %} mr-0 ml-4">
+						<a class="nav-link dropdown-toggle pr-0 pl-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							{{ item.title }}
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -26,8 +26,8 @@
 						</div>
 					</li>
 					{% else %}
-					<li class="nav-item {% if item.url == page.url %}active{% endif %} {% if forloop.last %}mr-0{% endif %}" >
-						<a class="nav-link {% if forloop.last %}pr-0{% endif %}" href="{{ item.url }}">
+					<li class="nav-item {% if item.url == page.url %}active{% endif %} mr-0 ml-4" >
+						<a class="nav-link pr-0 pl-4" href="{{ item.url }}">
 							{{ item.title }}
 						</a>
 					</li>
