@@ -1,5 +1,4 @@
 nav ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     list-style: none;
     font-weight: bold;
 }
@@ -35,7 +34,7 @@ nav {
 }
 
 .nav-item {
-    text-align: right;
+    text-align: ;
 }
 
 span.icon {

@@ -9,6 +9,8 @@ pages:
         url: /rockhampton/
       - page: Redlynch
         url: /redlynch/
+  - title: News
+    url: /news/
   - title: About
     url: /about/
   - title: Contact
