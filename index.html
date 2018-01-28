@@ -21,40 +21,16 @@ title: madhouse
   </div>
 </div>
 <div class="row">
+	{% for i in (1..12) %}
 	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Lights">
+		<figure class="figure">
+			<img class="img-fluid rounded mx-auto" src="http://via.placeholder.com/300x300" alt="Lights">
+			<figcaption class="figure-caption text-center">
+				Product Description
+				<br>
+				$00.00
+			</figcaption>
+		</figure>
 	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Nature">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Fjords">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Lights">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Nature">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Fjords">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Lights">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Nature">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Fjords">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Lights">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Nature">
-	</div>
-	<div class="col-6 col-md-4 col-xl-3 mx-auto">
-		<img class="img-fluid rounded mb-4 mx-auto" src="http://via.placeholder.com/300x300" alt="Fjords">
-	</div>
+	{% endfor %}
 </div>
