@@ -2,10 +2,6 @@ nav ul {
     list-style: none;
     font-weight: bold;
 }
-nav ul li {
-    display: inline;
-    margin-right: 25px;
-}
 
 html {
   position: relative;
@@ -31,10 +27,6 @@ a:hover {
 
 nav {
     border-bottom: 1px solid #000000;
-}
-
-.nav-item {
-    text-align: ;
 }
 
 span.icon {
@@ -77,10 +69,22 @@ footer {
     max-height: 100%;
 }
 
+.dropdown-menu {
+    border-radius: 0px;
+}
+
 .dropdown:hover>.dropdown-menu {
-  display: block;
+    display: block;
 }
 
 .active {
     color: #FFFFFF !important;
+}
+/* Removes caret from dropdown button */
+.dropdown-toggle:after {
+    content: none 
+}
+
+.second-navbar{
+    margin-top: 74px;
 }

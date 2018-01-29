@@ -17,3 +17,69 @@ pages:
     url: /contact/
   - title: Home
     url: /
+
+categories:
+  - title: Décor
+    subcategories:
+      - title: Design Canvases
+        url: 
+      - title: Wall Art
+        url: 
+      - title: Statues & Ornaments
+        url: 
+      - title: Photo Frames
+        url: 
+      - title: Candle & Accessories
+        url: 
+  - title: Home & Garden
+    subcategories:
+      - title: Glassware
+        url:
+      - title: Homeware 
+        url:
+      - title: Bathware
+        url:
+      - title: Kitchenware
+        url:
+      - title: Fragrance
+        url:
+      - title: Storage
+        url:
+  - title: Outdoor & Travel Goods
+    subcategories:
+      - title: Camping Goods
+        url:
+  - title: Hardware
+    subcategories:
+      - title: Auto
+        url:
+  - title: Art & Craft
+    url:
+  - title: Beauty & Health
+    subcategories:
+      - title: Hair Accessories
+        url:
+      - title: Make Up
+        url:
+  - title: Toys & Novelty
+    url:
+  - title: Party & Gift
+    subcategories:
+      - title: Cards
+        url:
+      - title: Gift bags & Gift wrap
+        url:
+      - title: Party
+        url:
+  - title: Electrical
+    subcategories:
+      - title: Batteries
+        url:
+      - title: Torches
+        url:
+      - title: Fitness
+        url:
+  - title: Pet Care
+    url:
+  - title: Souvenirs
+    url:

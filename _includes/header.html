@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
 		<!-- Madhouse Logo -->
-		<a href="/" class="navbar-brand m-0">
+		<a href="/" class="navbar-brand">
 			<img src="/assets/images/MadHouseLogo.svg" width="250px" alt="madhouse logo">
 		</a>
 		<button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
 					{% if item.url == page.url %}
 						active
 					{% endif %}">
-						<a class="nav-link pl-4 pr-0
+						<a class="nav-link 
 							{% if item.title == "Stores" %} 
 								dropdown-toggle
 							{% endif %}
@@ -44,6 +44,9 @@
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								{% for entry in item.subitems %}
 								<a class="dropdown-item" href="{{ entry.url }}">{{ entry.page }}</a>
+								{% unless forloop.last %}
+								<div class="dropdown-divider"></div>
+								{% endunless %}
 								{% endfor %}
 							</div>
 						{% endif %}
@@ -53,19 +56,58 @@
 		</div>
 	</div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light second-navbar">
 	<div class="container">
 		<!-- Right aligns the collapsed navbar toggle -->
-		<a class="navbar-brand" href="#"></a>
+		<a class="navbar-brand m-0 p-0" href="#"></a>
 		<button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#product-navbar" aria-controls="product-navbar" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="fas fa-bars fa-lg"></span>
 		</button>
-		<div class="collapse navbar-collapse justify-content-between" id="product-navbar">
-			<ul class="navbar-nav mx-auto">
-				{% for count in (1..10) %}
-				<li class="nav-item mx-auto">
-					<a class="nav-link px-auto" href="#">Category {{ count }}</a>
-				</li>
+		<div class="collapse navbar-collapse" id="product-navbar">
+			<ul class="navbar-nav m-auto">
+				{% for category in site.data.navigation.categories %}
+					<li class="nav-item m-auto
+					{% if category.subcategories %} 
+						dropdown 
+					{% endif %}
+					{% for entry in category.subcategories %} 
+						{% if entry.url == page.url %}
+							active
+						{% endif %} 
+					{% endfor %} 
+					{% if category.url == page.url %}
+						active
+					{% endif %}">
+						<a class="nav-link px-1
+							{% if category.subcategories %} 
+								dropdown-toggle
+							{% endif %}
+							"
+							{% unless category.subcategories %}
+								href="{{ category.url }}"
+							{% else %}
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							{% endunless %}
+							style="font-size: 15px;" 
+						>
+							{{ category.title }}
+						</a>
+						{% if category.subcategories %}
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								{% for entry in category.subcategories %}
+								<a class="dropdown-item mx-auto" href="{{ entry.url }}">{{ entry.title }}</a>
+								{% unless forloop.last %}
+								<div class="dropdown-divider"></div>
+								{% endunless %}
+								{% endfor %}
+							</div>
+						{% endif %}
+					</li>
 				{% endfor %}
 			</ul>
 		</div>
