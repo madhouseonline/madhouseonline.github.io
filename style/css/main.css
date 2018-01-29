@@ -77,6 +77,10 @@ footer {
     display: block;
 }
 
+.dropdown-menu {
+  margin: -0.125rem 0 0;
+}
+
 .active {
     color: #FFFFFF !important;
 }
