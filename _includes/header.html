@@ -1,16 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container">
+		<button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#product-navbar" aria-controls="product-navbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fas fa-bars fa-lg"></span>
+		</button>
 		<!-- Madhouse Logo -->
 		<a href="/" class="navbar-brand">
 			<img src="/assets/images/MadHouseLogo.svg" width="250px" alt="madhouse logo">
 		</a>
-		<button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="fas fa-bars fa-lg"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<div class="collapse navbar-collapse" id="main-navbar">
 			<ul class="navbar-nav ml-auto">
 				{% for item in site.data.navigation.pages %}
-					<li class="nav-item mx-auto 
+					<li class="nav-item 
 					{% if item.title == "Stores" %} 
 						dropdown 
 					{% endif %}
@@ -56,17 +59,12 @@
 		</div>
 	</div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-0 py-lg-2">
 	<div class="container">
-		<!-- Right aligns the collapsed navbar toggle -->
-		<a class="navbar-brand m-0 p-0" href="#"></a>
-		<button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#product-navbar" aria-controls="product-navbar" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="fas fa-bars fa-lg"></span>
-		</button>
 		<div class="collapse navbar-collapse" id="product-navbar">
 			<ul class="navbar-nav m-auto">
 				{% for category in site.data.navigation.categories %}
-					<li class="nav-item m-auto
+					<li class="nav-item
 					{% if category.subcategories %} 
 						dropdown 
 					{% endif %}

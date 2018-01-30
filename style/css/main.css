@@ -3,15 +3,6 @@ nav ul {
     font-weight: bold;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
-
 p {
     text-align: justify;
 }
@@ -24,10 +15,11 @@ a:hover {
     color: inherit;
     text-decoration: inherit;
 }
-
+/*
 nav {
     border-bottom: 1px solid #000000;
 }
+*/
 
 span.icon {
     font-size: 25px;
@@ -40,7 +32,7 @@ span.icon {
 .table th, .table td {
     border: 0px !important;
 }
-
+/*
 .footer {
   position: absolute;
   bottom: 0;
@@ -63,6 +55,7 @@ footer {
 .footer-container .text-muted {
   margin: 20px 0;
 }
+*/
 
 .map {
     max-width: 100%;
@@ -78,17 +71,40 @@ footer {
 }
 
 .dropdown-menu {
-  margin: -0.125rem 0 0;
+    margin: -0.125rem 0 0;
 }
 
-.active {
-    color: #FFFFFF !important;
+/* News page styling */
+.news-list {
+    list-style-type: none;
+    padding: 0;
 }
+
 /* Removes caret from dropdown button */
 .dropdown-toggle:after {
     content: none 
 }
 
-.second-navbar{
-    margin-top: 74px;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.text-muted {
+    color: #6c757d !important
 }
