@@ -3,6 +3,15 @@ nav ul {
     font-weight: bold;
 }
 
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+/*
+footer ul li {
+    display: inline;
+}*/
+
 p {
     text-align: justify;
 }
@@ -74,15 +83,15 @@ footer {
     margin: -0.125rem 0 0;
 }
 
+/* Removes caret from dropdown button */
+.dropdown-toggle:after {
+    content: none 
+}
+
 /* News page styling */
 .news-list {
     list-style-type: none;
     padding: 0;
-}
-
-/* Removes caret from dropdown button */
-.dropdown-toggle:after {
-    content: none 
 }
 
 /* Sticky footer styles
@@ -93,16 +102,21 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
 }
 .footer {
+/*
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
+  */
   background-color: #f5f5f5;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
 }
 
 .text-muted {
